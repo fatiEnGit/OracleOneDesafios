@@ -1,0 +1,225 @@
+body {
+  box-sizing: border-box;
+}
+#titulo {
+  font-size: 1.5rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 0.9375rem; /* Equivalente a 15px (0.9375 * 16px) */
+  padding-top: 0.625rem; /* Equivalente a 10px (0.625 * 16px) */
+  background-color: antiquewhite;
+}
+
+div.contenedor {
+  display: flex;
+  height: 100vh;
+}
+
+div.area-input {
+  background-color: lightblue;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.area-output {
+  width: 50%;
+  height: 100%;
+  background-image: url(fondo.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.explicacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.25rem;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: grey;
+  margin-bottom: 1.875rem; /* Equivalente a 30px (1.875 * 16px) */
+  margin-top: -1.25rem; /* Equivalente a -20px (-1.25 * 16px) */
+  background-color: antiquewhite;
+  border-color: antiquewhite;
+  border-radius: 10%;
+  padding: 0.3125rem; /* Equivalente a 5px (0.3125 * 16px) */
+  max-width: 80%; /* Equivalente a 500px (31.25 * 16px) */
+}
+
+.input {
+  background-color: aquamarine;
+  border-radius: 0.3125rem; /* Equivalente a 5px (0.3125 * 16px) */
+  font-size: 1rem;
+  border-color: aqua;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.input:active {
+  border-color: azure;
+  background-color: blanchedalmond;
+}
+
+.input:hover {
+  border-color: azure;
+  background-color: blanchedalmond;
+}
+
+.resultado {
+  box-sizing: border-box; /*Que todo quede dentro del contenedor principal*/
+  word-wrap: break-word; /*Para que las palabras se corten y no salgan del contenedor*/
+  background-color: aqua;
+  border-radius: 0.3125rem; /* Equivalente a 5px (0.3125 * 16px) */
+  padding: 0.625rem; /* Equivalente a 10px (0.625 * 16px) */
+  min-width: 6.25rem; /* Equivalente a 100px (6.25 * 16px) */
+  max-width: 31.25rem; /* Equivalente a 500px (31.25 * 16px) */
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.reset,
+.enviar,
+.copiar,
+.desencriptar {
+  background-color: rgb(161, 255, 255);
+  border-radius: 0.6125rem;
+  padding: 0.3125rem; /* Equivalente a 5px (0.3125 * 16px) */
+  font-weight: bold;
+  color: royalblue;
+  border-color: aquamarine;
+  border-style: outset;
+}
+.desencriptar {
+  margin-top: 0.3125rem;
+}
+.reset:hover,
+.enviar:hover,
+.copiar:hover,
+.desencriptar:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.reset,
+.copiar {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 0.625rem; /* Equivalente a 10px (0.625 * 16px) */
+}
+
+.footer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+@media (max-width: 768px) {
+  div.contenedor {
+    flex-direction: column;
+  }
+  div.area-input {
+    height: 50%;
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  div.area-output {
+    height: 50%;
+    width: 100%;
+    background-size: auto;
+    background-position-y: calc(100% + 2rem);
+    word-wrap: break-word;
+  }
+  .explicacion {
+    max-width: 70%;
+    text-align: center;
+  }
+  .reset,
+  .enviar,
+  .copiar,
+  .desencriptar {
+    display: block;
+    font-size: 1.3rem;
+  }
+  .input,
+  .resultado {
+    font-size: 7vw;
+  }
+}
+@media (max-width: 500px) {
+  div.area-input {
+    font-size: 0.7rem;
+    box-sizing: border-box;
+  }
+  div.explicacion {
+    font-size: 0.7rem;
+    box-sizing: border-box;
+  }
+  div.area-output {
+    background-position-y: calc(100% + 1rem);
+    font-size: 0.7rem;
+    box-sizing: border-box;
+  }
+  .reset,
+  .enviar,
+  .copiar,
+  .desencriptar {
+    display: block;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 300px) {
+  div.area-input {
+    font-size: 0.5rem;
+    box-sizing: border-box;
+  }
+  div.explicacion {
+    display: none;
+  }
+  div.area-output {
+    background-position-y: calc(100% + 2rem);
+    font-size: 0.5rem;
+    box-sizing: border-box;
+  }
+}
+@media (min-width: 2000px) {
+  header h1#titulo {
+    font-size: 3rem;
+  }
+  div.area-input {
+    font-size: 2rem;
+    width: 70%;
+  }
+  div.explicacion {
+    font-size: 2rem;
+  }
+  div .explicacion .resultado {
+    height: 10%;
+  }
+  div.area-output {
+    font-size: 2rem;
+    width: 70%;
+  }
+  .input,
+  .resultado,
+  .reset,
+  .enviar,
+  .copiar,
+  .desencriptar {
+    font-size: 2rem;
+  }
+}
