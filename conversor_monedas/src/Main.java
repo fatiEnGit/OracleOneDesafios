@@ -28,6 +28,10 @@ public class Main {
                     """);
             var numberOption = scanner.nextInt();
             doesUserLeave = numberOption;
+              if (numberOption == 7)
+            {
+                break;
+            }
                 System.out.println("Write an amount");
                 var amountOption = scanner.nextDouble();
                 Request moneyConversion = new Request();
