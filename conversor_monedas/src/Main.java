@@ -13,8 +13,9 @@ public class Main {
                              Welcome to the currency converter!
                 ***************************************************************
                 """);
-
+        try{
         do {
+
             System.out.println("""
                     Choose an option:
                     
@@ -28,7 +29,7 @@ public class Main {
                     """);
             var numberOption = scanner.nextInt();
             doesUserLeave = numberOption;
-              if (numberOption == 7)
+            if (numberOption == 7)
             {
                 break;
             }
@@ -71,6 +72,11 @@ public class Main {
 
 
         }while (doesUserLeave != 7);
+        }
+        catch (InputMismatchException e)
+        {
+            System.out.println("Invalid separator for decimals, replace '.' with ',' or viceversa");
+        }
 
     }
 }
